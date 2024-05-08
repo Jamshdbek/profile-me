@@ -22,8 +22,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/*  */}
-      <main />
       <body className={inter.className}>
         <Header />
         {/* <div className="absolute w-full top-0 left-0  min-h-[100%]">
