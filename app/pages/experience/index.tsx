@@ -1,6 +1,6 @@
 function index() {
   return (
-    <div className="flex justify-between mt-[30vh]">
+    <div className="md:flex justify-between mt-[30vh]">
       <h1 className="teg_text">Experience</h1>
       <div className="border-collapse border-white max-w-[75vh]">
         <div className="w-full justify-between flex  min-w-[50vh]">

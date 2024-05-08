@@ -1,6 +1,6 @@
 function index() {
   return (
-    <div className="flex justify-between mt-[30vh]">
+    <div className=" md:flex justify-between mt-[30vh]">
       <h1 className="teg_text">About me</h1>
       <div className="border-collapse border-white max-w-[75vh]">
         <p className="text-[rgb(148, 163, 184)]   opacity-90">
