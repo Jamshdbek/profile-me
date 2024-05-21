@@ -1,19 +1,25 @@
 "use client";
-import { Ref, useCallback } from "react";
-import { ViewPage, AboutPage, ExperiencePage, ProjectsPage } from "./pages";
-import { HomePageModel } from "./models";
+import { AboutPage, ProjectsPage } from "./pages";
+import Welcomer from "./components/welcomer/welcomer";
+import { FloatingNav } from "./components/ui/floating-navbar";
+import Experience from "./components/experience/Experience";
 export default function MainPage() {
-  const redirectToSection = useCallback((ref: any) => {
-    if (ref.current) {
-      ref.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, []);
   return (
-    <main className="mx-[14vw] justify-center ">
-      <ViewPage />
-      <AboutPage />
-      <ExperiencePage />
-      <ProjectsPage />
+    <main className=" relative  bg-black flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10  px-5">
+      <div className=" max-w-7xl w-full">
+        <FloatingNav
+          navItems={[
+            { name: "Home", link: "/#home" },
+            { name: "About", link: "/#about" },
+            { name: "Experience", link: "/#experience" },
+            { name: "Projects", link: "/#projects" },
+          ]}
+        />
+        <Welcomer />
+        <AboutPage />
+        <ProjectsPage />
+        <Experience />
+      </div>
     </main>
   );
 }

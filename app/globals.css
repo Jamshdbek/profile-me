@@ -2,100 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
   }
 }
-.teg_text {
-  font-size: 30px;
-  font-weight: bold;
-}
-.text_wrap {
-  text-align: center;
-  justify-content: center;
-  background: #5f5d5d;
-  font-weight: bold;
-  background: radial-gradient(
-    circle farthest-side at center center,
-    #c9c7c7 50%,
-    #928f91 100%
-  );
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: relative;
-}
 
-.text_wrap::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 30%;
-  height: 100%;
-  filter: blur(200px);
-  /* background-color: blue; */
-  /* animation: lightPass 4s linear infinite; */
-  /* animation-direction: reverse;  */
-}
-@keyframes lightPass {
-  0% {
-    transform: translateX(-80%);
-    transform: translateY(-40%);
-
-    /* background:  radial-gradient(to right, rgba(138, 134, 134, 0.8) 100%, rgba(214, 207, 207, 0) 100%); */
-    background: radial-gradient(
-      circle farthest-side at center center,
-      #6b6666 50%,
-      #413a40 100%
-    );
+@layer base {
+  * {
+    @apply border-border !scroll-smooth;
   }
-  100% {
-    transform: translateX(100%);
-
-    /* background:  radial-gradient(to right, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 0) 100%); */
-    background: radial-gradient(
-      circle farthest-side at center center,
-      #c9c7c7 50%,
-      #413a40 100%
-    );
+  body {
+    @apply bg-background text-foreground;
   }
-}
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  button {
+    @apply active:outline-none;
+  }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .heading {
+    @apply font-bold text-4xl md:text-5xl text-center;
   }
-}
-/* anim */
-.path {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: dash 5s linear alternate infinite;
-}
 
-@keyframes dash {
-  from {
-    stroke-dashoffset: 822;
-  }
-  to {
-    stroke-dashoffset: 0;
+  .black-gradient {
+    background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
   }
 }
