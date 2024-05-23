@@ -25,7 +25,7 @@ function Welcomer() {
       <div className="flex justify-center ">
         <div className=" max-w-[89vw] md:max-w-2xl lg:max0w0[60vw] flex flex-col items-center justify-center">
           <h2 className=" z-10 uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Welcome to my Portolio page
+            Welcome to my Portfolio page
             <br />
           </h2>
           <h1 className="z-10 w-full text-4xl md:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">

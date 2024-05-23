@@ -31,7 +31,7 @@ function index() {
     },
   ];
   return (
-    <section id="projects" className="w-full justify-between mt-[30vh]">
+    <section id="projects" className="w-full justify-between mt-[10vh]">
       {" "}
       <h1 className="header_title">Projects</h1>
       <br />

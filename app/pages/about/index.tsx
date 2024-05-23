@@ -3,12 +3,14 @@ import { Button, MovingBorder } from "@/app/components/ui/moving-border";
 import Spline from "@splinetool/react-spline";
 import img from "@/assets/image/c8f7f4fa968020aa5670c7d1c00fc320.jpg";
 import { MyStack } from "./stack";
+import { TracingBeamDemo } from "./tracing";
+import { TracingBeam } from "@/app/components/ui/tracing-beam";
 function index() {
   return (
     <section id="about" className=" z-10 md:mt-[20vh]">
       <h1 className=" header_title">About me.</h1>
       <div className=" md:flex gap-10">
-        <div className="sm:w-full md:max-w-[40vw] max-h-[40vh] w-full border-r-emerald-50">
+        <div className="sm:w-full md:max-w-[40vw] max-h-[40vh] w-full border-r-emerald-50 relative">
           <Button
             borderRadius="10px"
             style={{
@@ -22,9 +24,16 @@ function index() {
             containerClassName="w-full min-w-[04vh] min-h-[50vh] "
             duration={Math.floor(Math.random() * 1000) + 10000}
           >
+            <h2 className="z-1 absolute top-[50%]">React Developer </h2>
+            <br />
+            <p className="z-1 absolute top-[60%]">
+              {" "}
+              programming and building web sites
+            </p>
+
             <Spline
               scene="https://prod.spline.design/AnF6-gFEiyf49cZM/scene.splinecode"
-              className=" rounded-[50px]"
+              className=" rounded-[50px] z-10"
             />
           </Button>
         </div>
@@ -41,10 +50,46 @@ function index() {
           <MyStack />
         </div>
       </div>
-      <BentoGrid className=" mx-auto relatives  mt-[20vh] gap-10 justify-between flex">
-        {/* <BentoGridItem title={"hello"} className="w-full min-w-[60%]"  description={"sfdf"} /> */}
-        {/* <BentoGridItem title={"hello"} className="w-full max-w-[40%]" description={"sfdf"} /> */}
-      </BentoGrid>
+      {/* <TracingBeam className="px-6">
+        <div className="max-w-2xl mx-auto antialiased pt-4 relative">
+          <BentoGrid className=" mx-auto relatives  mt-[20vh] gap-10 justify-between flex">
+            <BentoGridItem
+              title={"hello"}
+              className="w-full min-w-[60%]"
+              description={"sfdf"}
+            />
+            <BentoGridItem
+              title={"hello"}
+              className="w-full max-w-[40%]"
+              description={"sfdf"}
+            />
+          </BentoGrid>
+          <BentoGrid className=" mx-auto relatives  mt-[20vh] gap-10 justify-between flex">
+            <BentoGridItem
+              title={"hello"}
+              className="w-full min-w-[60%]"
+              description={"sfdf"}
+            />
+            <BentoGridItem
+              title={"hello"}
+              className="w-full max-w-[40%]"
+              description={"sfdf"}
+            />
+          </BentoGrid>
+          <BentoGrid className=" mx-auto relatives  mt-[20vh] gap-10 justify-between flex">
+            <BentoGridItem
+              title={"hello"}
+              className="w-full min-w-[60%]"
+              description={"sfdf"}
+            />
+            <BentoGridItem
+              title={"hello"}
+              className="w-full max-w-[40%]"
+              description={"sfdf"}
+            />
+          </BentoGrid>
+        </div>
+      </TracingBeam> */}
     </section>
   );
 }
