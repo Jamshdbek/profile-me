@@ -1,11 +1,12 @@
 import React from "react";
 import { Spotlight } from "../ui/Spotlight";
-import { TextGenerateEffect } from "../ui/text-generate-effect";
 import MagicButton from "../ui/borderMagic";
+import { useRouter } from "next/navigation";
 
 function Welcomer() {
+  const router = useRouter();
   return (
-    <div className=" w-full pb-20 pt-36  min-h-[80vh]">
+    <div className=" w-full pb-20 pt-36  md:min-h-[80vh]">
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -28,11 +29,14 @@ function Welcomer() {
             <br />
           </h2>
           <h1 className="z-10 w-full text-4xl md:text-6xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-            Jamshid Ibrokhimov
+            Jamshidbek Ibrokhimov
           </h1>
           <br />
           <p className="z-10 text-center text-lg ">web frontend developer</p>
-          <MagicButton text="contact me" handleClick={() => {}} />
+          <MagicButton
+            text="Show more"
+            handleClick={() => router.push("#about")}
+          />
         </div>
       </div>
     </div>

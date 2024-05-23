@@ -1,11 +1,10 @@
-import React from "react";
+"use client";
 interface PropsButton {
-  className?: string;
   text: string;
   icon?: string;
   handleClick?: () => void;
 }
-function MagicButton({ className, text, handleClick, icon }: PropsButton) {
+function MagicButton({ text, handleClick, icon }: PropsButton) {
   return (
     <button
       onClick={handleClick}

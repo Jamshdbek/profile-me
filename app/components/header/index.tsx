@@ -1,16 +1,17 @@
 import React from "react";
+import { FloatingNav } from "../ui/floating-navbar";
 
-function Header() {
+function HeaderNavbar() {
   return (
-    <header className=" w-full flex m-auto justify-center gap-3 p-3 fixed bottom-0  ">
-      <div className=" flex gap-3  text-white  border  z-50  bg-black p-4 rounded-[50px] text-sm">
-        <h5>Home</h5>
-        <h5>About</h5>
-        <h5>Experience</h5>
-        <h5>Projects</h5>
-      </div>
-    </header>
+    <FloatingNav
+      navItems={[
+        { name: "Home", link: "/#home" },
+        { name: "About", link: "/#about" },
+        { name: "Projects", link: "/#projects" },
+        { name: "Experience", link: "/#experience" },
+      ]}
+    />
   );
 }
 
-export default Header;
+export default HeaderNavbar;
