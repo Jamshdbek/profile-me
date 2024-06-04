@@ -1,5 +1,7 @@
 import Image, { StaticImageData } from "next/image";
-import paybek from "@/assets/image/panel.png";
+import paybek from "@/assets/image/hunarda.png";
+import crm from "@/assets/image/Server-Monitoring.png";
+
 import myUHL from "@/assets/image/my_uhl.jpg";
 import { Link } from "lucide-react";
 import { BentoGrid, BentoGridItem } from "@/app/components/ui/bento-grid";
@@ -12,22 +14,22 @@ interface ItemType {
 function index() {
   const projects: ItemType[] = [
     {
-      name: "Paybek",
-      description: "SRM System Panel for web ",
+      name: "Hunarda uz ",
+      description: "Hunarda learning web platform ",
       link: "",
       img: paybek,
     },
     {
       name: "My Uhl",
-      description: "SRM System Panel for web",
+      description: "Meal Ordering System for UHL",
       link: "https://www.my-uhl.com/",
       img: myUHL,
     },
     {
       name: "Smart Factory",
       description: "SRM System Panel for web",
-      link: "https://www.my-uhl.com/",
-      img: paybek,
+      link: "",
+      img: crm,
     },
   ];
   return (
