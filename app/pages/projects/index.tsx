@@ -3,7 +3,6 @@ import paybek from "@/assets/image/hunarda.png";
 import crm from "@/assets/image/Server-Monitoring.png";
 
 import myUHL from "@/assets/image/my_uhl.jpg";
-import { Link } from "lucide-react";
 import { BentoGrid, BentoGridItem } from "@/app/components/ui/bento-grid";
 interface ItemType {
   name: string;
