@@ -4,6 +4,7 @@ import crm from "@/assets/image/Server-Monitoring.png";
 
 import myUHL from "@/assets/image/my_uhl.jpg";
 import { BentoGrid, BentoGridItem } from "@/app/components/ui/bento-grid";
+import { StickyScrollRevealDemo } from "./details";
 interface ItemType {
   name: string;
   link: string;
@@ -36,7 +37,7 @@ function index() {
       {" "}
       <h1 className="header_title">Projects</h1>
       <br />
-      <BentoGrid className="w-full mx-auto">
+      {/* <BentoGrid className="w-full mx-auto">
         {projects.map((item, i) => (
           <BentoGridItem
             key={i}
@@ -47,7 +48,8 @@ function index() {
             className={i === 3 || i === 6 ? "md:col-span-2" : ""}
           />
         ))}
-      </BentoGrid>
+      </BentoGrid> */}
+      <StickyScrollRevealDemo />
     </section>
   );
 }

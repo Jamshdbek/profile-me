@@ -90,3 +90,17 @@
     background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
   }
 }
+
+
+.line_overflow::-webkit-scrollbar {
+  width: 0.2em;
+}
+
+.line_overflow::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.line_overflow::-webkit-scrollbar-thumb {
+background-color: #000000;
+outline: 1px solid #000000;
+}

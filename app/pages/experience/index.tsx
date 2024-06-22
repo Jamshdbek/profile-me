@@ -4,7 +4,7 @@ import { CanvasRevealEffectDemo } from "./grid";
 
 function Experience() {
   return (
-    <section id="experience" className=" mt-[12vh]" >
+    <section id="experience" className=" mt-[3vh]" >
       <h1 className=" header_title">My Experience</h1>
       <div className="w-full mt-[10vh] ">
         <CanvasRevealEffectDemo />
