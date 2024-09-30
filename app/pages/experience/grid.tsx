@@ -4,6 +4,7 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "@/app/components/ui/canvas-reveal-effect";
 import paybek from "@/assets/image/paybek.svg";
+import xazna from "@/assets/image/xanza.png";
 import freelance from "@/assets/image/freelance.png";
 import Image from "next/image";
 export function CanvasRevealEffectDemo() {
@@ -11,13 +12,23 @@ export function CanvasRevealEffectDemo() {
     <>
       <div className="py-5  w-full flex flex-col lg:flex-row items-center justify-center bg-white dark:bg-black  gap-4 mx-auto sm:px-2 md:px-20">
         <Card
-          title="Paybek compony"
+          title="Paybek"
           dis="Frontend developer React"
           icon={paybek}
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
             containerClassName="bg-emerald-900"
+          />
+        </Card>
+        <Card
+          title="Xazna"
+          dis="Frontend developer Angular"
+          icon={xazna}
+        >
+          <CanvasRevealEffect
+            animationSpeed={5.1}
+            containerClassName="bg-green-900"
           />
         </Card>
         <Card title="Freelance " icon={freelance}>
