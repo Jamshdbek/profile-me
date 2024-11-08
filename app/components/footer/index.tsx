@@ -21,12 +21,12 @@ export const Footer = () => {
           {/* Ready <span className=" text-purple">to get started?</span> */}
         </h2>
         <p className=" text-center text-white-200 md:mt-10 my-5 ">
-          Reach out to me today and let's discuss how I can help you.
+          Reach out to me today and let's discuss how I can help you. (jamshid.ibro@gmail.com)
         </p>
         {/* <MagicButton handleClick={()=>handleNav()} text="Let's get in touch" /> */}
       </div>
       <div className=" w-full flex items-center z-10 justify-center  mt-20 absolute">
-        <p className="  md:text-[12px] "> Copyright © 2024 Jamshid</p>
+        <p className="  md:text-[12px] "> Copyright © {new Date().getFullYear()} Jamshid</p>
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "@/app/components/ui/canvas-reveal-effect";
 import paybek from "@/assets/image/paybek.svg";
-import xazna from "@/assets/image/xanza.png";
+import xazna from "@/assets/xazna.png";
 import freelance from "@/assets/image/freelance.png";
 import Image from "next/image";
 export function CanvasRevealEffectDemo() {
@@ -31,7 +31,7 @@ export function CanvasRevealEffectDemo() {
             containerClassName="bg-green-900"
           />
         </Card>
-        <Card title="Freelance " icon={freelance}>
+        {/* <Card title="Freelance " icon={freelance}>
           <CanvasRevealEffect
             animationSpeed={3}
             containerClassName="bg-black-90"
@@ -41,7 +41,7 @@ export function CanvasRevealEffectDemo() {
             ]}
             dotSize={2}
           />
-        </Card>
+        </Card> */}
       </div>
     </>
   );
