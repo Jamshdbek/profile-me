@@ -1,11 +1,7 @@
 import React from "react";
-import MagicButton from "../ui/borderMagic";
 import { BackgroundBeams } from "../ui/background-beams";
+import Link from "next/link";
 export const Footer = () => {
-  const handleNav  = () =>{
-    // alert("clicked")
-    console.log('clickd')
-  }
   return (
     <div className=" relative w-full pt-20 pb-10 max-h-[10vh] " id="content">
       <div className="w-full absolute left-0 -bottom-72 min-h-96 z-10">
@@ -21,7 +17,7 @@ export const Footer = () => {
           {/* Ready <span className=" text-purple">to get started?</span> */}
         </h2>
         <p className=" text-center text-white-200 md:mt-10 my-5 ">
-          Reach out to me today and let's discuss how I can help you. (jamshid.ibro@gmail.com)
+          Reach out to me today and let's discuss how I can help you. <Link href={"email:jamshid.ibro@gmail.com"}>(jamshid.ibro@gmail.com)</Link>
         </p>
         {/* <MagicButton handleClick={()=>handleNav()} text="Let's get in touch" /> */}
       </div>
